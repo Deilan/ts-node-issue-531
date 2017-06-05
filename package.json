@@ -1,0 +1,16 @@
+{
+  "name": "node-typescript-vscode",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "npm run build:live",
+    "build:live": "nodemon --config nodemon.json"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.27",
+    "nodemon": "^1.11.0",
+    "ts-node": "^3.0.4",
+    "typescript": "^2.3.4"
+  },
+  "dependencies": {
+  }
+}

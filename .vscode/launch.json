@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch via global nodemon",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": "nodemon",
+            "runtimeArgs": [
+            ],
+            "restart": false
+            // "console": "integratedTerminal",
+            // "internalConsoleOptions": "neverOpen"
+        },
+        {
+            "name": "Launch via local nodemon",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/nodemon",
+            "runtimeArgs": [
+            ],
+            "restart": false,
+            "console": "integratedTerminal"
+            // "internalConsoleOptions": "neverOpen",
+            // "protocol": "inspector"
+        }
+    ]
+}

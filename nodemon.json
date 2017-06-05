@@ -1,0 +1,8 @@
+{
+    "verbose": true,
+    "watch": [
+        "src"
+    ],
+    "ext": "ts",
+    "exec": "{{pwd}}/node_modules/.bin/ts-node ./src/index.ts"
+}
