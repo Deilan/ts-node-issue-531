@@ -7,13 +7,19 @@
             "request": "launch",
             "protocol": "inspector",
             "cwd": "${workspaceRoot}",
-            "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/nodemon.cmd",
+            "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/nodemon",
             "runtimeArgs": [
+                "--exitcrash",                
+                "--config", "{{pwd}}/nodemon.json",
                 "--exec", "${workspaceRoot}/node_modules/.bin/ts-node", "${workspaceRoot}/src/index.ts"
             ],
+            "windows": {
+                "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/nodemon.cmd"
+            },
             "restart": true,
-            "console": "integratedTerminal"
-        },        
+            "console": "internalConsole",
+            "internalConsoleOptions": "openOnFirstSessionStart"
+        },
         {
             "name": "Attach to node",
             "type": "node",
