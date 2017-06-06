@@ -2,4 +2,9 @@ import { Greeter } from './greeter';
 
 const greeter = new Greeter<string>("Hello, world");
 
-console.log(greeter.greet());
+setTimeout(function() {
+    console.log(greeter.greet());
+    console.log(greeter.greet());
+    console.log(greeter.greet());
+    console.log(greeter.greet());
+}, 5000);

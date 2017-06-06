@@ -2,29 +2,25 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch via global nodemon",
+            "name": "Launch via nodemon",
             "type": "node",
             "request": "launch",
+            "protocol": "inspector",
             "cwd": "${workspaceRoot}",
-            "runtimeExecutable": "nodemon",
+            "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/nodemon.cmd",
             "runtimeArgs": [
+                "--exec", "${workspaceRoot}/node_modules/.bin/ts-node", "${workspaceRoot}/src/index.ts"
             ],
-            "restart": false
-            // "console": "integratedTerminal",
-            // "internalConsoleOptions": "neverOpen"
-        },
-        {
-            "name": "Launch via local nodemon",
-            "type": "node",
-            "request": "launch",
-            "cwd": "${workspaceRoot}",
-            "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/nodemon",
-            "runtimeArgs": [
-            ],
-            "restart": false,
+            "restart": true,
             "console": "integratedTerminal"
-            // "internalConsoleOptions": "neverOpen",
-            // "protocol": "inspector"
+        },        
+        {
+            "name": "Attach to node",
+            "type": "node",
+            "request": "attach",
+            "protocol": "inspector",
+            "restart": true,
+            "port": 5858
         }
     ]
 }
