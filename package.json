@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "start": "npm run build:live",
-    "build:live": "./node_modules/.bin/nodemon --inspect=5858 --exec {{pwd}}/node_modules/.bin/ts-node ./src/index.ts"
+    "build:live": "./node_modules/.bin/nodemon --inspect=5858 --config ./nodemon.json --exec {{pwd}}/node_modules/.bin/ts-node ./src/index.ts"
   },
   "devDependencies": {
     "@types/node": "^7.0.27",

@@ -9,16 +9,22 @@
             "cwd": "${workspaceRoot}",
             "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/nodemon",
             "runtimeArgs": [
-                "--exitcrash",                
-                "--config", "{{pwd}}/nodemon.json",
+                "--inspect=5858",
+                "--exitcrash",
+                "--config", "${workspaceRoot}/nodemon.json",
                 "--exec", "${workspaceRoot}/node_modules/.bin/ts-node", "${workspaceRoot}/src/index.ts"
             ],
             "windows": {
                 "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/nodemon.cmd"
             },
+            "port": 5858,
             "restart": true,
-            "console": "internalConsole",
-            "internalConsoleOptions": "openOnFirstSessionStart"
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "openOnFirstSessionStart",
+            "skipFiles": [
+                "node_modules/**",
+                "<node_internals>/**"
+            ]
         },
         {
             "name": "Attach to node",
@@ -26,7 +32,11 @@
             "request": "attach",
             "protocol": "inspector",
             "restart": true,
-            "port": 5858
+            "port": 5858,
+            "skipFiles": [
+                "node_modules/**",
+                "<node_internals>/**"
+            ]
         }
     ]
 }
