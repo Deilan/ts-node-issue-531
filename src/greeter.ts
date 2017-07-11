@@ -1,9 +1,9 @@
 export class Greeter<T> {
-    greeting: T;
+    private greeting: T;
     constructor(message: T) {
         this.greeting = message;
     }
-    greet() {
+    public greet() {
         return this.greeting;
     }
 }
