@@ -9,7 +9,6 @@
             "cwd": "${workspaceRoot}",
             "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/nodemon",
             "runtimeArgs": [
-                "--inspect=5858",
                 "--exitcrash",
                 "--config", "${workspaceRoot}/nodemon.json",
                 "--exec", "${workspaceRoot}/node_modules/.bin/ts-node", "${workspaceRoot}/src/index.ts"
@@ -17,7 +16,6 @@
             "windows": {
                 "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/nodemon.cmd"
             },
-            "port": 5858,
             "restart": true,
             "console": "integratedTerminal",
             "internalConsoleOptions": "openOnFirstSessionStart",
