@@ -6,9 +6,11 @@
     "build:live": "./node_modules/.bin/nodemon --inspect=5858 --config ./nodemon.json --exec {{pwd}}/node_modules/.bin/ts-node ./src/index.ts"
   },
   "devDependencies": {
-    "@types/node": "^7.0.27",
+    "@types/node": "7.0.34",
     "nodemon": "^1.11.0",
-    "ts-node": "^3.0.4",
-    "typescript": "^2.3.4"
-  }
+    "ts-node": "^3.2.0",
+    "tslint": "^5.5.0",
+    "typescript": "^2.4.1"
+  },
+  "dependencies": {}
 }
