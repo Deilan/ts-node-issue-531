@@ -5,4 +5,4 @@ const greeter = new Greeter<string>("Hello, world");
 setTimeout(() => {
     // tslint:disable-next-line:no-console
     console.log(greeter.greet());
-}, 10000);
+}, 5000);

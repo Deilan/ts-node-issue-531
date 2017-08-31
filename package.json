@@ -18,12 +18,12 @@
     "tsc": "./node_modules/.bin/tsc"
   },
   "devDependencies": {
-    "@types/node": "7.0.34",
+    "@types/node": "^7.0.43",
     "nodemon": "^1.11.0",
     "rimraf": "^2.6.1",
-    "ts-node": "^3.2.0",
-    "tslint": "^5.5.0",
-    "typescript": "^2.4.1"
+    "ts-node": "^3.3.0",
+    "tslint": "^5.7.0",
+    "typescript": "^2.4.2"
   },
   "dependencies": {}
 }

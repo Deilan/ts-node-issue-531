@@ -13,12 +13,9 @@
                 "--config", "${workspaceRoot}/nodemon.json",
                 "--exec", "${workspaceRoot}/node_modules/.bin/ts-node", "${workspaceRoot}/src/index.ts"
             ],
-            "windows": {
-                "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/nodemon.cmd"
-            },
             "restart": true,
             "console": "integratedTerminal",
-            "internalConsoleOptions": "openOnFirstSessionStart",
+            "internalConsoleOptions": "openOnSessionStart",
             "skipFiles": [
                 "node_modules/**",
                 "<node_internals>/**"
