@@ -3,10 +3,11 @@
   "version": "0.0.1",
   "scripts": {
     "start": "npm run serve:ts",
-    "serve:dev": "npm run nodemon -- --inspect=5858 --config ./nodemon.json --exec {{pwd}}/node_modules/.bin/ts-node ./src/index.ts",
+    "serve:dev": "npm run nodemon -- --inspect=5858 --config ./nodemon.json --exec {{pwd}}/node_modules/.bin/ts-node ./src/index.ts --project ./tsconfig.development.json",
     "serve:prod": "node ./dist/index.js",
     "build:prod": "npm run compile:prod",
-    "compile:prod": "npm run tsc -- -p ./tsconfig.json",
+    "compile:dev": "npm run tsc -- -p ./tsconfig.development.json -w",
+    "compile:prod": "npm run tsc -- -p ./tsconfig.production.json",
     "clean:prod": "npm run rimraf -- ./dist/**/*",
     "lint": "npm run tslint -- -c ./tslint.json -p ./tsconfig.json",
     "lint:fix": "npm run tslint -- -c ./tslint.json -p ./tsconfig.json --fix",
