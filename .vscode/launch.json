@@ -17,6 +17,11 @@
                 "${workspaceRoot}/src/index.ts",
                 "--project", "${workspaceRoot}/tsconfig.development.json"
             ],
+            // "runtimeExecutable": "npm",
+            // "runtimeArgs": [
+            //     "run-script",
+            //     "serve:debug"
+            // ],
             "restart": true,
             "console": "integratedTerminal",
             "internalConsoleOptions": "openOnSessionStart",

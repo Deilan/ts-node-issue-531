@@ -3,29 +3,28 @@
   "version": "0.0.1",
   "scripts": {
     "start": "npm run serve:ts",
-    "serve:dev": "npm run nodemon -- --inspect=5858 --config ./nodemon.json --exec {{pwd}}/node_modules/.bin/ts-node ./src/index.ts --project ./tsconfig.development.json",
+    "serve:debug": "cross-env NODE_ENV=development nodemon --config ./nodemon.json --exec {{pwd}}/node_modules/.bin/ts-node ./src/index.ts --project ./tsconfig.development.json",
+    "serve:dev": "nodemon --inspect=5858 --config ./nodemon.json --exec {{pwd}}/node_modules/.bin/ts-node ./src/index.ts --project ./tsconfig.development.json",
     "serve:prod": "node ./dist/index.js",
     "build:prod": "npm run compile:prod",
-    "compile:dev": "npm run tsc -- -p ./tsconfig.development.json -w",
-    "compile:prod": "npm run tsc -- -p ./tsconfig.production.json",
-    "clean:prod": "npm run rimraf -- ./dist/**/*",
-    "lint": "npm run tslint -- -c ./tslint.json -p ./tsconfig.json",
-    "lint:fix": "npm run tslint -- -c ./tslint.json -p ./tsconfig.json --fix",
+    "compile:dev": "tsc -p ./tsconfig.development.json -w",
+    "compile:prod": "tsc -p ./tsconfig.production.json",
+    "clean:prod": "rimraf ./dist/**/*",
+    "lint": "tslint -c ./tslint.json -p ./tsconfig.json",
+    "lint:fix": "tslint -c ./tslint.json -p ./tsconfig.json --fix",
     "test": "exit 0",
-    "ci:travis": "npm run lint && npm run test && npm run build:prod",
-    "nodemon": "./node_modules/.bin/nodemon",
-    "tslint": "./node_modules/.bin/tslint",
-    "rimraf": "./node_modules/.bin/rimraf",
-    "tsc": "./node_modules/.bin/tsc"
+    "ci:travis": "npm run lint && npm run test && npm run build:prod"
   },
   "devDependencies": {
     "@types/node": "^8.5.1",
-    "nodemon": "^1.12.1",
+    "nodemon": "^1.14.12",
     "rimraf": "^2.6.2",
-    "ts-node": "^3.3.0",
+    "ts-node": "^4.1.0",
     "tslib": "^1.7.1",
     "tslint": "^5.7.0",
     "typescript": "^2.6.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "cross-env": "5.1.3"
+  }
 }
