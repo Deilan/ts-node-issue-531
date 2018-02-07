@@ -7,36 +7,14 @@
             "request": "launch",
             "protocol": "inspector",
             "cwd": "${workspaceRoot}",
-            "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/nodemon",
+            "runtimeExecutable": "npm",
             "runtimeArgs": [
-                "--exitcrash",
-                "--config", "${workspaceRoot}/nodemon.json",
-                "--exec", "${workspaceRoot}/node_modules/.bin/ts-node"
+                "run-script",
+                "serve:debug"
             ],
-            "args": [
-                "${workspaceRoot}/src/index.ts",
-                "--project", "${workspaceRoot}/tsconfig.development.json"
-            ],
-            // "runtimeExecutable": "npm",
-            // "runtimeArgs": [
-            //     "run-script",
-            //     "serve:debug"
-            // ],
             "restart": true,
             "console": "integratedTerminal",
             "internalConsoleOptions": "openOnSessionStart",
-            "skipFiles": [
-                "node_modules/**",
-                "<node_internals>/**"
-            ]
-        },
-        {
-            "name": "Attach to node",
-            "type": "node",
-            "request": "attach",
-            "protocol": "inspector",
-            "restart": true,
-            "port": 5858,
             "skipFiles": [
                 "node_modules/**",
                 "<node_internals>/**"
