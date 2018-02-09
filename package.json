@@ -2,7 +2,8 @@
   "name": "node-typescript-vscode",
   "version": "0.0.1",
   "scripts": {
-    "serve:debug": "cross-env NODE_ENV=development nodemon --config ./nodemon.json --exec {{pwd}}/node_modules/.bin/ts-node ./src/index.ts --project ./tsconfig.development.json"
+    "serve:debug2": "cross-env NODE_ENV=development nodemon --config ./nodemon.json --exec {{pwd}}/node_modules/.bin/ts-node --inspect=5858 ./src/index.ts --project ./tsconfig.development.json",
+    "serve:debug": "cross-env NODE_ENV=development nodemon"
   },
   "devDependencies": {
     "@types/node": "^8.5.1",

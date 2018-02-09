@@ -2,23 +2,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch via nodemon",
+            "name": "Attach to nodemon",
             "type": "node",
-            "request": "launch",
+            "request": "attach",
+            "port": 5858,
             "protocol": "inspector",
-            "cwd": "${workspaceRoot}",
-            "runtimeExecutable": "npm",
-            "runtimeArgs": [
-                "run-script",
-                "serve:debug"
-            ],
-            "restart": true,
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "openOnSessionStart",
-            "skipFiles": [
-                "node_modules/**",
-                "<node_internals>/**"
-            ]
+            "cwd": "${workspaceRoot}"
         }
     ]
 }
